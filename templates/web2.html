@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Web Service 2</title>
+  </head>
+  <style>
+    body {
+        background: rgb(35, 39 ,42);
+        padding-top: 10%;
+      }
+    table, td, th {
+      width: 750px;
+      padding-top: 3%;
+    border: 1px solid white;
+    margin-left: auto;
+  margin-right: auto;
+    }
+
+    table {
+    
+    border-collapse: collapse;
+    }   
+    h1 {
+      text-align: center;
+      color:rgb(254, 190, 16) ;
+      }
+    </style>
+    <h1>Click on a movie to see its trailer</h1>
+  <body>
+    <table  >
+      <tr>
+        <th style="color:rgb(254, 190, 16);">Movies directed by {{director_name}} </th>
+        {% for movie in movies%}
+        
+        <tr>
+          <td style="text-align:center;" ><b><a style="color:rgb(4, 125, 238);" href="{{ url_for('web3' , movie_name=movie) }}">{{movie}}</a></b></td>
+  
+        </tr>
+        {% endfor %}
+      
+    </table>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,26 @@
+int ok = 1;
+
+//        System.out.println("Insert your quote here:");
+//        Scanner quoteScanner = new Scanner(System.in);
+//        quote = quoteScanner.nextLine();
+//        quoteScanner.close();
+        quote = new String("I have the high ground!");
+
+        Scanner scanner = new Scanner( new File("./src/com/cwk1/jaxrs/alex/quotes.txt"));
+        scanner.useDelimiter(",|\\r\\n");
+
+        while( scanner.hasNext() && ok == 1) {
+            token = scanner.next();
+            System.out.print(token + "\n-------------------\n");
+            if(token.equals(quote)) {
+                ok = 0;
+                movie = scanner.next();
+                director = scanner.next();
+                scanner.close();
+                return "Movie title: " + movie + " Director: " + director +" \n";
+            }
+
+        }
+        scanner.close();
+
+        return "wang";

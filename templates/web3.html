@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Web Service 3</title>
+    <style>
+      body {
+          background: rgb(35, 39 ,42);
+          padding-top: 10%;
+          margin: auto;
+        }
+        .content {
+        max-width: 500px;
+        margin: auto;
+        }
+        h1 {
+      text-align: center;
+      color:rgb(254, 190, 16) ;
+      }
+      
+      </style>
+  </head>
+  <h1>Trailers for the movie you picked</h1>
+  <body>
+    
+    {% for link in links%}
+    <div class="content">
+    <br>
+    <iframe   allow="fullscreen;" width="600" height="400" src={{link}}> </iframe>
+    </div>
+    
+    {% endfor %}
+    
+  </body>
+</html>
