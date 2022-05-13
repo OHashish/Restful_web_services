@@ -1,3 +1,9 @@
+Description
+Webservice 1: when a famous movie quote is entered ,it gets all famous movie quotes from movie directed by the directory of the famouse movie.
+Webservice 2: gets all movies directed by a specified director (small local .csv)
+Webservice 3: uses YouTube API to get movie trailers 
+
+
 Web Service 1
 -use java 1.8
 -dependencies jersey jar files 
